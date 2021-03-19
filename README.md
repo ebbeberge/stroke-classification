@@ -6,3 +6,5 @@ We analyze a stroke dataset and formulate neural network models for predicting w
 | Eirik Berge | eirik.berge@ntnu.no |
 | Camilla Idina Jensen Elvebakken| cielveba@stud.ntnu.no |
 | Martin Ludvigsen | martilud@ntnu.no |
+
+To install the needed package dependencies, simply run `pip install -r requirements.txt`
