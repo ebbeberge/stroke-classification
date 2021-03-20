@@ -8,3 +8,5 @@ We analyze a stroke dataset and formulate neural network models for predicting w
 | Martin Ludvigsen | martilud@ntnu.no |
 
 To install the needed package dependencies, simply run `pip install -r requirements.txt`
+
+Dataset is downloaded from: https://www.kaggle.com/fedesoriano/stroke-prediction-dataset
