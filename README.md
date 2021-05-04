@@ -81,7 +81,7 @@ For most of the models, we plot ```ROC curves``` as well as ```Precision-Recall 
   <img height="400px" src="images/ROC-balanced.png">
 </p>
 
-For some of the models, it is imporantant to find the best ```hyperparameters```. This can be done in a multitude of ways; we have opted to illustrate both the use of ```Grid Search``` and ```Bayesian Search``` to find optimal hyperparameters for our models.
+For some of the models, it is important to find the best ```hyperparameters```. This can be done in a multitude of ways; we have opted to illustrate both the use of ```Grid Search``` and ```Bayesian Search``` to find optimal hyperparameters for our models.
 
 The various methods with their properties are listed below. As can be seen from the diagram, some of the methods perform better than others with respect to different metrics. If a model should be considered, it should carefully be chosen based on whether high accuracy, precision, or recall is the most attractive property to have.
 
@@ -97,9 +97,9 @@ The various methods with their properties are listed below. As can be seen from 
 | XgBoost | GridSearchCV | 0.100 | 0.837 | 0.694 | 0.848 |
 | XgBoost | BayesianSearchCV | 0.099 |0.837 | 0.688 | 0.850 |
 
-## Explainable Artificial Intellegence
+## Explainable Artificial Intelligence
 
-Since the predictions from the classification problem we are working with are very important, possibly lifechanging, predictions, the need for interpretability of the model arises. Understanding in which cases the model predicts that someone will have a stroke can help us identify which features or combination of features which are important for early detection and prevention. We will now try to use some of the methods from explainable AI to interpret the results from our random forest methods. We choose to interpret the XgBoost model with parameters found with Bayesian search, as this produced some of the best results. 
+Since the predictions from the classification problem we are working with are very important, possibly life-changing, predictions, the need for interpretability of the model arises. Understanding in which cases the model predicts that someone will have a stroke can help us identify which features or combination of features are important for early detection and prevention. We will now try to use some of the methods from explainable AI to interpret the results from our random forest methods. We choose to interpret the XgBoost model with parameters found with Bayesian search, as this produced some of the best results. 
 
 The following plot shows which features are most important in the building of the trees in the XgBoots model:
 
@@ -107,9 +107,9 @@ The following plot shows which features are most important in the building of th
   <img height="400px" src="images/importance_of_variables.png">
 </p>
 
-We see that the most important features seems to be ```age```, ```avg_glucose_level```, and ```hypertension```. The model does not indicate that ```smoking``` or ```bmi``` is important, which is interesting.
+We see that the most important features seem to be ```age```, ```avg_glucose_level```, and ```hypertension```. The model does not indicate that ```smoking``` or ```bmi``` is important, which is interesting.
 
-For the ```age``` variable, we plot below a PD plot to see the marginal effects the features have on the predicted outcome of the XgBoots. The PD plots shows what the marginal effect on the stroke prediction is for a specific value of a given feature.
+For the ```age``` variable, we plot below a PD plot to see the marginal effects the features have on the predicted outcome of the XgBoots. The PD plots show what the marginal effect on the stroke prediction is for a specific value of a given feature.
 
 <p align="center">
   <img height="400px" src="images/PDP_for_age.png">
@@ -117,6 +117,6 @@ For the ```age``` variable, we plot below a PD plot to see the marginal effects 
 
 ## Conclusion
 
-We have developed various models for predicting future strokes in patients based on a small collection of easily testible variables. The models developed varies in performance for different metrics. Moreover, the computational speed for the different methods are also varied, ranging from a few seconds to several minutes. For more information about the models developed, we recommend to read the technical report:
+We have developed various models for predicting future strokes in patients based on a small collection of easily testable variables. The models developed varies in performance for different metrics. Moreover, the computational speed for the different methods is also varied, ranging from a few seconds to several minutes. For more information about the models developed, we recommend reading the technical report:
 
 :rocket: <a href=https://ebbeberge.github.io/stroke-prediction/> Full Technical Report</a> :rocket:
