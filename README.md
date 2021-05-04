@@ -21,50 +21,50 @@ To install the needed package dependencies, simply run `pip install -r requireme
 
 We analyze a stroke dataset and formulate various statistical models for predicting whether a patient has had a stroke based on measurable predictors. The goal is to, with the help of several easily measuable predictors such as ```smoking```,  ```hyptertension```, ```age```, to predict whether a person will suffer from a stroke. Since the data is heavily skewed (about 96% of the patients have never suffered a stroke), then we are forced to consider other measures than simply the accuracy of the model. As such, we develop various methods where we report both the accuracy, the recall, and the precision of the methods. For the full technical report, see
 
-:rocket: <a href=https://github.com/ebbeberge/stroke-classification/blob/main/Index.html> Full Technical Report</a> :rocket:
+:rocket: <a href=https://ebbeberge.github.io/stroke-prediction/> Full Technical Report</a> :rocket:
 
 ## About Stroke and the Dataset
 
 <img align="right" height="300px" src="images/stroke.jpg">
 
-A stroke is a condition where the blood flow to the brain is decreased, where the lack of blood flow causes cell death in the brain. One can roughly classify strokes into two main types: ```Ischemic stroke```, which is due to lack of blood flow, and ```hemorrhagic stroke```, due to bleeding. Both of the varients causes the brain to stop functioning properly. As strokes are one of the leading causes of death, it is of vital imporantance to understand the condition, as well as being able to predict the condition in advanced so that preventory measures can be taken to decrease the change. If you suspect that someone is experiencing a stroke (due to e.g. struggling to say simple complete sentences, or struggling to smile), then call your respective immergency number (in Norway: 113) immediately. For more information about the illness (in Norwegian), see
+A stroke is a condition where the blood flow to the brain is decreased, causing cell death in the brain. One can roughly classify strokes into two main types: ```Ischemic stroke```, which is due to lack of blood flow, and ```hemorrhagic stroke```, due to bleeding. Both variants cause the brain to stop functioning properly. As strokes are one of the leading causes of death, it is of vital importance to understand the condition, as well as being able to predict the condition in advance so that preventive measures can be taken to decrease the chance. If you suspect that someone is experiencing a stroke (due to e.g. struggling to say simple complete sentences, or struggling to smile), then call your respective emergency number (in Norway: 113) immediately. For more information about the illness (in Norwegian), see
 
 <a href=https://www.helsenorge.no/sykdom/hjerneslag/hjerneslag-arsaker/#ring-113-umiddelbart> Helsenorge - Stroke (Hjerneslag) </a>
 
 The dataset stems from <a href=https://www.kaggle.com/fedesoriano/stroke-prediction-dataset> Kaggle - Stroke Prediction </a> and records several details about over 5000 patients along with whether they have experienced a stroke. The complete list of recorded variables of the patients are:
 
-* **id**: unique identifyer
-* **gender**: gender of the patient (*Male*, *Female*, *Other*)
-* **age**: age of the patient
-* **hypertension**: if the patient has hypertension or not (1,0)
-* **heart_disease**: if the patient has a heart disease or not (1, 0)
-* **ever_married**: if the patient was ever married (*No*, *Yes*)
-* **work_type**: what kind of work the patient has (*Children*, *Govt_job*, *Never_worked*, *Private*, *Self-employed*)
-* **residence_type**: what type of place the patient lives in (*Rural*, *Urban*)
-* **avg_glucose_level**: average glucose level in blood
-* **bmi**: body mass index
-* **smoking_status**: smoking status of patient (*formerly smoked*, *never smoked*, *smokes*, *Unknown*)
-* **stroke**: if the patient has had a stroke or not (1, 0)
+* ```id``` - A unique identifier for the patient.
+* ```gender``` - The gender of the patient (*Male*, *Female*, *Other*).
+* ```age``` - The age of the patient.
+* ```hypertension``` - Records if the patient has hypertension or not (0, 1).
+* ```heart_disease``` - Records if the patient has a heart disease or not (0, 1).
+* ```ever_married``` - Records if the patient has ever been married (*No*, *Yes*).
+* ```work_type``` - What kind of work the patient has (*Children*, *Govt_job*, *Never_worked*, *Private*, *Self-employed*).
+* ```residence_type``` - What area the patient lives in (*Rural*, *Urban*).
+* ```avg_glucose_level``` - Records the average glucose level in the patients blood.
+* ```bmi``` -  Records the Body Mass Index (BMI) of the patient.
+* ```smoking_status``` - Records the smoking status of patient (*formerly smoked*, *never smoked*, *smokes*, *Unknown*).
+* ```stroke``` - Records if the patient has had a stroke or not (0, 1). This is the response variable we try to predict.
 
-Unfortunately, the origin of the data is confidential, so we do not have any context regarding the data other than the variables listed above. In particular, we do not know the origin of the patients, nor do we know why the patients filled out the information we have been presented with. If the patients already had a sufficient medical history so that a e.g. a physician asked them to fill out the details presented, then this can heavily influence the data we have been given. With such little information about the data collected, the models we develop can only be used for illustrative/educational purposes. For furter development of the project, the focus should be on better data quality rather  than more advanced models.
+Unfortunately, the origin of the data is confidential, so we do not have any context regarding the data other than the variables listed above. In particular, we do not know the country of origin for the patients, nor do we know why the patients filled out the information we have been presented with. If the patients already had a severe medical history so that e.g. a physician asked them to fill out the details presented, then this can heavily influence the data we have been given. With such little information about the data collected, the models we develop can only be used for illustrative/educational purposes. For further development of the project, the focus should be on better data quality rather  than more advanced models.
 
 ## Data Exploration
 
-In the data, there are 201 patients where their ```bmi``` has not been reported. Due to this being a possible relevant variable, we have chosen to remove these patents since they only consitute 4% of the total amount of patients. For the variable ```gender```, there are the three options <b>Male</b>, <b>Female</b>, and <b>Other</b>. Since there is only 1 patient whom is registered with the gender <b>Other</b>, we must unfortunately discard this patient as we will not be able to use this information in a statistical significant way. The variable ```smoking_status``` has the options <b>never smoked</b>, <b>formerly smoked</b>, <b> smokes</b>, and <b>unknown</b>. Since there are a significant amount of patents registered with <b>unknown </b> as their smoking status, we have choosen to include these patents in the study.
+In the data, there are 201 patients where their BMI has been reported in the variable ```bmi```. Due to this being a possible relevant variable, we have chosen to remove these patents since they only constitute 4% of the total amount of patients. For the variable ```gender```, there are three options: <b>Male</b>, <b>Female</b>, and <b>Other</b>. Since there is only 1 patient whom is registered with the gender <b>Other</b>, we must, unfortunately, discard this patient as we will not be able to use this information in a statistically significant way. The variable ```smoking_status``` has the options <b>never smoked</b>, <b>formerly smoked</b>, <b> smokes</b>, and <b>unknown</b>. Since there are a significant amount of patents registered with <b>unknown </b> as their smoking status, we have chosen to include these patients in the study.
 
-The following histogram shows the age distribution of the patents that have experienced a stroke:
+The following histogram shows the age distribution of the patients that have experienced a stroke:
 
 <p align="center">
   <img height="400px" src="images/age_distribution.png">
 </p>
 
-We see that more old people than young people have strokes, while we seem to have a good representation of all ages in the dataset. Hence it seems that ```age``` will be an important predictor for predicting ```stroke```. We end this section by showing a heatmap of the correlation between the different variables:
+We see that more old people than young people have strokes, while we seem to have a good representation of all ages in the dataset. Hence ```age``` will be an important predictor for predicting ```stroke```. We end this section by showing a heatmap of the correlation between the different variables:
 
 <p align="center">
   <img height="400px" src="images/corrplot.png">
 </p>
 
-We see from the heatmap above that the response ```stroke``` does not seems particularily correlated with any of the predictors. Thus the choice of non-linear models such as ensembles and neural networks is well motivated. When using methods with the assumtion that the features are independent we have to be careful though - many of the features are highly correlated with each other, for example ```age```, ```ever_married``` and ```children```.
+We see from the heatmap above that the response ```stroke``` does not seem particularly correlated with any of the predictors. Thus the choice of non-linear models such as ensembles and neural networks is well motivated. When using methods with the assumption that the features are independent we have to be careful though - many of the features are highly correlated with each other, for example ```age```, ```ever_married``` and ```children```.
 
 ## Models Developed
 
@@ -119,4 +119,4 @@ For the ```age``` variable, we plot below a PD plot to see the marginal effects 
 
 We have developed various models for predicting future strokes in patients based on a small collection of easily testible variables. The models developed varies in performance for different metrics. Moreover, the computational speed for the different methods are also varied, ranging from a few seconds to several minutes. For more information about the models developed, we recommend to read the technical report:
 
-:rocket: <a href=https://github.com/ebbeberge/stroke-classification/blob/main/Index.html> Full Technical Report</a> :rocket:
+:rocket: <a href=https://ebbeberge.github.io/stroke-prediction/> Full Technical Report</a> :rocket:
