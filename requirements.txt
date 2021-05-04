@@ -1,1 +1,11 @@
-pandas>=1.1.3
+numpy
+pandas
+seaborn
+matplotlib
+skopt
+xgboost
+pdpbox
+lime
+imblearn
+sklearn
+tensorflow
