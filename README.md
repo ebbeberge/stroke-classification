@@ -33,18 +33,18 @@ A stroke is a condition where the blood flow to the brain is decreased, causing 
 
 The dataset stems from <a href=https://www.kaggle.com/fedesoriano/stroke-prediction-dataset> Kaggle - Stroke Prediction </a> and records several details about over 5000 patients along with whether they have experienced a stroke. The complete list of recorded variables of the patients are:
 
-* **id**: unique identifyer
-* **gender**: gender of the patient (*Male*, *Female*, *Other*)
-* **age**: age of the patient
-* **hypertension**: if the patient has hypertension or not (1,0)
-* **heart_disease**: if the patient has a heart disease or not (1, 0)
-* **ever_married**: if the patient was ever married (*No*, *Yes*)
-* **work_type**: what kind of work the patient has (*Children*, *Govt_job*, *Never_worked*, *Private*, *Self-employed*)
-* **residence_type**: what type of place the patient lives in (*Rural*, *Urban*)
-* **avg_glucose_level**: average glucose level in blood
-* **bmi**: body mass index
-* **smoking_status**: smoking status of patient (*formerly smoked*, *never smoked*, *smokes*, *Unknown*)
-* **stroke**: if the patient has had a stroke or not (1, 0)
+* ```id``` - A unique identifier for the patient.
+* ```gender``` - The gender of the patient (*Male*, *Female*, *Other*).
+* ```age``` - The age of the patient.
+* ```hypertension``` - Records if the patient has hypertension or not (0, 1).
+* ```heart_disease``` - Records if the patient has a heart disease or not (0, 1).
+* ```ever_married``` - Records if the patient has ever been married (*No*, *Yes*).
+* ```work_type``` - What kind of work the patient has (*Children*, *Govt_job*, *Never_worked*, *Private*, *Self-employed*).
+* ```residence_type``` - What area the patient lives in (*Rural*, *Urban*).
+* ```avg_glucose_level``` - Records the average glucose level in the patients blood.
+* ```bmi``` -  Records the Body Mass Index (BMI) of the patient.
+* ```smoking_status``` - Records the smoking status of patient (*formerly smoked*, *never smoked*, *smokes*, *Unknown*).
+* ```stroke``` - Records if the patient has had a stroke or not (0, 1). This is the response variable we try to predict.
 
 Unfortunately, the origin of the data is confidential, so we do not have any context regarding the data other than the variables listed above. In particular, we do not know the origin of the patients, nor do we know why the patients filled out the information we have been presented with. If the patients already had a sufficient medical history so that a e.g. a physician asked them to fill out the details presented, then this can heavily influence the data we have been given. With such little information about the data collected, the models we develop can only be used for illustrative/educational purposes. For furter development of the project, the focus should be on better data quality rather  than more advanced models.
 
