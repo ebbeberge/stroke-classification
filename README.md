@@ -23,7 +23,7 @@ We analyze a stroke dataset and formulate various statistical models for predict
 
 ## About Stroke and the Dataset
 
-<img align="right" height="300px" src="stroke.jpg">
+<img align="right" height="300px" src="images/stroke.jpg">
 
 A stroke is a condition where the blood flow to the brain is decreased, where the lack of blood flow causes cell death in the brain. One can roughly classify strokes into two main types: ```Ischemic stroke```, which is due to lack of blood flow, and ```hemorrhagic stroke```, due to bleeding. Both of the varients causes the brain to stop functioning properly. As strokes are one of the leading causes of death, it is of vital imporantance to understand the condition, as well as being able to predict the condition in advanced so that preventory measures can be taken to decrease the change. If you suspect that someone is experiencing a stroke (due to e.g. struggling to say simple complete sentences, or struggling to smile), then call your respective immergency number (in Norway: 113) immediately. For more information about the illness (in Norwegian), see
 
@@ -53,13 +53,13 @@ In the data, there are 201 patients where their ```bmi``` has not been reported.
 The following histogram shows the age distribution of the patents that have experienced a stroke:
 
 <p align="center">
-  <img height="400px" src="age_distribution.png">
+  <img height="400px" src="images/age_distribution.png">
 </p>
 
 We see that more old people than young people have strokes, while we seem to have a good representation of all ages in the dataset. Hence it seems that ```age``` will be an important predictor for predicting ```stroke```. We end this section by showing a heatmap of the correlation between the different variables:
 
 <p align="center">
-  <img height="400px" src="corrplot.png">
+  <img height="400px" src="images/corrplot.png">
 </p>
 
 We see from the heatmap above that the response ```stroke``` does not seems particularily correlated with any of the predictors. Thus the choice of non-linear models such as ensembles and neural networks is well motivated. When using methods with the assumtion that the features are independent we have to be careful though - many of the features are highly correlated with each other, for example ```age```, ```ever_married``` and ```children```.
@@ -76,7 +76,7 @@ We develop several models to predict the binary variable `stroke` based on the o
 For most of the models, we plot ```ROC curves``` as well as ```Precision-Recall Curves``` to graphically illustrate their performance. For the balanced random forest, the curves are shown below:
 
 <p align="center">
-  <img height="400px" src="ROC-balanced.png">
+  <img height="400px" src="images/ROC-balanced.png">
 </p>
 
 For some of the models, it is imporantant to find the best ```hyperparameters```. This can be done in a multitude of ways; we have opted to illustrate both the use of ```Grid Search``` and ```Bayesian Search``` to find optimal hyperparameters for our models.
@@ -90,7 +90,7 @@ Since the predictions from the classification problem we are working with are ve
 The following plot shows which features are most important in the building of the trees in the XgBoots model:
 
 <p align="center">
-  <img height="400px" src="importance_of_variables.png">
+  <img height="400px" src="images/importance_of_variables.png">
 </p>
 
 We see that the most important features seems to be ```age```, ```avg_glucose_level```, and ```hypertension```. The model does not indicate that ```smoking``` or ```bmi``` is important, which is interesting.
@@ -98,7 +98,7 @@ We see that the most important features seems to be ```age```, ```avg_glucose_le
 For the ```age``` variable, we plot below a PD plot to see the marginal effects the features have on the predicted outcome of the XgBoots. The PD plots shows what the marginal effect on the stroke prediction is for a specific value of a given feature.
 
 <p align="center">
-  <img height="400px" src="PDP_for_age.png">
+  <img height="400px" src="images/PDP_for_age.png">
 </p>
 
 ## Conclusion
