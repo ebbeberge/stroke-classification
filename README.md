@@ -1,5 +1,5 @@
-# :hospital: Predicting Stroke 
-## with Artifical Neural Networks, Ensamble-Methods, and Explainable Artificial Intellegence
+# :hospital: Stroke Prediction
+## Using Artifical Neural Networks, Ensamble-Methods, and Explainable Artificial Intellegence
 
 | Team Members in Alphabetical Order | Email | 
 |---------|-----------------|
