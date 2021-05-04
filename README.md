@@ -71,4 +71,10 @@ We develop several models to predict the binary variable `stroke` based on the o
 - _Random Forests (standard, weighted, and balanced)_
 - _Boosting (specifically XgBoost)_
 
+For some of the models, it is imporantant to find the best ```hyperparameters```. This can be done in a multitude of ways; we have opted to illustrate both the use of ```Grid Search``` and ```Bayesian Search``` to find optimal hyperparameters for our models.
+
 The various methods with their properties are listed below. As can be seen from the diagram, some of the methods perform better than others with respect to different metrics. If a model should be considered, it should carefully be chosen based on whether high accuracy, precision, or recall is the most attractive property to have.
+
+## Explainable Artificial Intellegence
+
+Since the predictions from the classification problem we are working with are very important, possibly lifechanging, predictions, the need for interpretability of the model arises. Understanding in which cases the model predicts that someone will have a stroke can help us identify which features or combination of features which are important for early detection and prevention. We will now try to use some of the methods from explainable AI to interpret the results from our random forest methods. We choose to interpret the XgBoost model with parameters found with Bayesian search, as this produced some of the best results.
