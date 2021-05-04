@@ -46,25 +46,25 @@ The dataset stems from <a href=https://www.kaggle.com/fedesoriano/stroke-predict
 * ```smoking_status``` - Records the smoking status of patient (*formerly smoked*, *never smoked*, *smokes*, *Unknown*).
 * ```stroke``` - Records if the patient has had a stroke or not (0, 1). This is the response variable we try to predict.
 
-Unfortunately, the origin of the data is confidential, so we do not have any context regarding the data other than the variables listed above. In particular, we do not know the origin of the patients, nor do we know why the patients filled out the information we have been presented with. If the patients already had a sufficient medical history so that a e.g. a physician asked them to fill out the details presented, then this can heavily influence the data we have been given. With such little information about the data collected, the models we develop can only be used for illustrative/educational purposes. For furter development of the project, the focus should be on better data quality rather  than more advanced models.
+Unfortunately, the origin of the data is confidential, so we do not have any context regarding the data other than the variables listed above. In particular, we do not know the country of origin for the patients, nor do we know why the patients filled out the information we have been presented with. If the patients already had a severe medical history so that e.g. a physician asked them to fill out the details presented, then this can heavily influence the data we have been given. With such little information about the data collected, the models we develop can only be used for illustrative/educational purposes. For further development of the project, the focus should be on better data quality rather  than more advanced models.
 
 ## Data Exploration
 
-In the data, there are 201 patients where their ```bmi``` has not been reported. Due to this being a possible relevant variable, we have chosen to remove these patents since they only consitute 4% of the total amount of patients. For the variable ```gender```, there are the three options <b>Male</b>, <b>Female</b>, and <b>Other</b>. Since there is only 1 patient whom is registered with the gender <b>Other</b>, we must unfortunately discard this patient as we will not be able to use this information in a statistical significant way. The variable ```smoking_status``` has the options <b>never smoked</b>, <b>formerly smoked</b>, <b> smokes</b>, and <b>unknown</b>. Since there are a significant amount of patents registered with <b>unknown </b> as their smoking status, we have choosen to include these patents in the study.
+In the data, there are 201 patients where their BMI has been reported in the variable ```bmi```. Due to this being a possible relevant variable, we have chosen to remove these patents since they only constitute 4% of the total amount of patients. For the variable ```gender```, there are three options: <b>Male</b>, <b>Female</b>, and <b>Other</b>. Since there is only 1 patient whom is registered with the gender <b>Other</b>, we must, unfortunately, discard this patient as we will not be able to use this information in a statistically significant way. The variable ```smoking_status``` has the options <b>never smoked</b>, <b>formerly smoked</b>, <b> smokes</b>, and <b>unknown</b>. Since there are a significant amount of patents registered with <b>unknown </b> as their smoking status, we have chosen to include these patients in the study.
 
-The following histogram shows the age distribution of the patents that have experienced a stroke:
+The following histogram shows the age distribution of the patients that have experienced a stroke:
 
 <p align="center">
   <img height="400px" src="images/age_distribution.png">
 </p>
 
-We see that more old people than young people have strokes, while we seem to have a good representation of all ages in the dataset. Hence it seems that ```age``` will be an important predictor for predicting ```stroke```. We end this section by showing a heatmap of the correlation between the different variables:
+We see that more old people than young people have strokes, while we seem to have a good representation of all ages in the dataset. Hence ```age``` will be an important predictor for predicting ```stroke```. We end this section by showing a heatmap of the correlation between the different variables:
 
 <p align="center">
   <img height="400px" src="images/corrplot.png">
 </p>
 
-We see from the heatmap above that the response ```stroke``` does not seems particularily correlated with any of the predictors. Thus the choice of non-linear models such as ensembles and neural networks is well motivated. When using methods with the assumtion that the features are independent we have to be careful though - many of the features are highly correlated with each other, for example ```age```, ```ever_married``` and ```children```.
+We see from the heatmap above that the response ```stroke``` does not seem particularly correlated with any of the predictors. Thus the choice of non-linear models such as ensembles and neural networks is well motivated. When using methods with the assumption that the features are independent we have to be careful though - many of the features are highly correlated with each other, for example ```age```, ```ever_married``` and ```children```.
 
 ## Models Developed
 
