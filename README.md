@@ -72,6 +72,12 @@ We develop several models to predict the binary variable `stroke` based on the o
 - _Random Forests (standard, weighted, and balanced)_
 - _Boosting (specifically XgBoost)_
 
+For most of the models, we plot ```ROC curves``` as well as ```Precision-Recall Curves``` to graphically illustrate their performance. For the balanced random forest, the curves are shown below:
+
+<p align="center">
+  <img height="400px" src="ROC-balanced.png">
+</p>
+
 For some of the models, it is imporantant to find the best ```hyperparameters```. This can be done in a multitude of ways; we have opted to illustrate both the use of ```Grid Search``` and ```Bayesian Search``` to find optimal hyperparameters for our models.
 
 The various methods with their properties are listed below. As can be seen from the diagram, some of the methods perform better than others with respect to different metrics. If a model should be considered, it should carefully be chosen based on whether high accuracy, precision, or recall is the most attractive property to have.
