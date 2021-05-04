@@ -15,6 +15,7 @@ To install the needed package dependencies, simply run `pip install -r requireme
 3. [Data Exploration](https://github.com/ebbeberge/stroke-classification/blob/main/README.md#data-exploration)
 4. [Models Developed](https://github.com/ebbeberge/stroke-classification/blob/main/README.md#models-developed)
 5. [Explainable Artificial Intellegence](https://github.com/ebbeberge/stroke-classification#explainable-artificial-intellegence)
+6. [Conclusion](https://github.com/ebbeberge/stroke-classification#conclusion)
 
 ## TL;DR: Predicting Stroke with Advanced Statistical Methods
 
