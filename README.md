@@ -1,16 +1,6 @@
 # :hospital: Predicting Stroke 
 ## with Artifical Neural Networks, Ensamble-Methods, and Explainable Artificial Intellegence
 
-## Table of Contents
-1. [TL;DR: Predicting Stroke with Advanced Statistical Methods](https://github.com/ebbeberge/stroke-classification#tldr-predicting-stroke-with-advanced-statistical-methods)
-2. [About the Dataset](https://github.com/ebbeberge/stroke-classification#about-the-dataset)
-
-
-
-## TL;DR: Predicting Stroke with Advanced Statistical Methods
-
-We analyze a stroke dataset and formulate various statistical models for predicting whether a person has had a stroke based on measurable predictors.
-
 | Team Members in Alphabetical Order | Email | 
 |---------|-----------------|
 | Eirik Berge | eirik.berge@ntnu.no |
@@ -18,6 +8,16 @@ We analyze a stroke dataset and formulate various statistical models for predict
 | Martin Ludvigsen | martilud@ntnu.no |
 
 To install the needed package dependencies, simply run `pip install -r requirements.txt`
+
+## Table of Contents
+1. [TL;DR: Predicting Stroke with Advanced Statistical Methods](https://github.com/ebbeberge/stroke-classification#tldr-predicting-stroke-with-advanced-statistical-methods)
+2. [About the Dataset](https://github.com/ebbeberge/stroke-classification#about-the-dataset)
+
+## TL;DR: Predicting Stroke with Advanced Statistical Methods
+
+We analyze a stroke dataset and formulate various statistical models for predicting whether a patient has had a stroke based on measurable predictors. The goal is to, with the help of several easily measuable predictors such as ```smoking```,  ```hyptertension```, ```age```, to predict whether a person will suffer from a stroke. Since the data is heavily skewed (about 96% of the patients has never suffered a stroke), then we are forced to consider other measures that simply the accuracy of the model. As such, we develop various methods where we report both the accuracy, the recall, and the precision of the methods. 
+
+The various methods with their properties are listed below. As can be seen from the diagram, some of the methods perform better than others with respect to different metrics. If a model should be used, it should carefully be considered whether high accuracy, precision, or recall is the most attractive property to have.
 
 ## About the Dataset
 
