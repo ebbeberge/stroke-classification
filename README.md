@@ -51,5 +51,7 @@ In the data, there are 201 patients where their ```bmi``` has not been reported.
 The following histogram shows the age distribution of the patents that have experienced a stroke:
 
 <p align="center">
-  <img height="400px" src="stroke.jpg">
+  <img height="400px" src="age_distribution.png">
 </p>
+
+We see that more old people than young people have strokes, while we seem to have a good representation of all ages in the dataset. Hence it seems that ```age``` will be an important predictor for predicting ```stroke```. We end this section by showing a heatmap of the correlation between the different variables:
