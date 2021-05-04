@@ -3,9 +3,9 @@
 
 | Team Members in Alphabetical Order | Email | 
 |---------|-----------------|
-| Eirik Berge | eirik.berge@ntnu.no |
-| Camilla Idina Jensen Elvebakken| cielveba@stud.ntnu.no |
-| Martin Ludvigsen | martilud@ntnu.no |
+| <a href=https://github.com/ebbeberge> Eirik Berge </a> | eirik.berge@ntnu.no |
+| <a href=https://github.com/cielveba> Camilla Idina Jensen Elvebakken </a> | cielveba@stud.ntnu.no |
+| <a href=https://github.com/martilud> Martin Ludvigsen </a> | martilud@ntnu.no |
 
 To install the needed package dependencies, simply run `pip install -r requirements.txt`
 
