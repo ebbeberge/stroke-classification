@@ -85,6 +85,18 @@ For some of the models, it is imporantant to find the best ```hyperparameters```
 
 The various methods with their properties are listed below. As can be seen from the diagram, some of the methods perform better than others with respect to different metrics. If a model should be considered, it should carefully be chosen based on whether high accuracy, precision, or recall is the most attractive property to have.
 
+| Model | Tuning  | Precision  | Recall  | Accuracy | ROC-AUC |
+|---|---|---|---|---|---|
+| Logistic Regression  | Built-in CV | 0.113 | 0.837  | 0.730  | 0.854 |
+| Deep Neural Network | - | 0.113 | 0.816 | 0.738 | - |
+| Balanced Decision Tree  |  GridSearchCV | 0.074 | 0.959 | 0.522 | 0.732 |
+| Random Forest | GridSearchCV | 0.077 | 0.041 | 0.942 | 0.598 |
+| Weighted Random Forest | GridSearchCV |0.119 | 0.735 | 0.773 | 0.818
+| Balanced Random Forest | GridSearchCV | 0.085 | 0.878 | 0.619 | 0.791 |
+| Balanced Random Forest | BayesianSearchCV | 0.086 | 0.939 | 0.597 | 0.826 |
+| XgBoost | GridSearchCV | 0.100 | 0.837 | 0.694 | 0.848 |
+| XgBoost | BayesianSearchCV | 0.099 |0.837 | 0.688 | 0.850 |
+
 ## Explainable Artificial Intellegence
 
 Since the predictions from the classification problem we are working with are very important, possibly lifechanging, predictions, the need for interpretability of the model arises. Understanding in which cases the model predicts that someone will have a stroke can help us identify which features or combination of features which are important for early detection and prevention. We will now try to use some of the methods from explainable AI to interpret the results from our random forest methods. We choose to interpret the XgBoost model with parameters found with Bayesian search, as this produced some of the best results. 
