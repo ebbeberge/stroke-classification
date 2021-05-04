@@ -19,7 +19,11 @@ We analyze a stroke dataset and formulate various statistical models for predict
 
 The various methods with their properties are listed below. As can be seen from the diagram, some of the methods perform better than others with respect to different metrics. If a model should be used, it should carefully be considered whether high accuracy, precision, or recall is the most attractive property to have.
 
-## About the Dataset
+## About Stroke and the Dataset
+
+A stroke is a condition where the blood flow to the brain is decreased, where the lack of blood flow causes cell death in the brain. One can roughly classify strokes into two main types: ```Ischemic stroke```, which is due to lack of blood flow, and ```hemorrhagic stroke```, due to bleeding. Both of the varients causes the brain to stop functioning properly. As strokes are one of the leading causes of death, it is of vital imporantance to understand the condition, as well as being able to predict the condition in advanced so that preventory measures can be taken to decrease the change. If you suspect that someone is experiencing a stroke (due to e.g. struggling to say simple complete sentences, or struggling to smile), then call your respective immergency number (in Norway: 113) immediately. For more information about the illness (in Norwegian), see
+
+<a href=https://www.helsenorge.no/sykdom/hjerneslag/hjerneslag-arsaker/#ring-113-umiddelbart> Helsenorge - Stroke (Hjerneslag) </a>
 
 The dataset stems from <a href=https://www.kaggle.com/fedesoriano/stroke-prediction-dataset> Kaggle - Stroke Prediction </a> and records several details about over 5000 patients along with whether they have experienced a stroke. The complete list of recorded variables of the patients are:
 
