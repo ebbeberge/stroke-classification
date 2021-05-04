@@ -21,7 +21,7 @@ To install the needed package dependencies, simply run `pip install -r requireme
 
 We analyze a stroke dataset and formulate various statistical models for predicting whether a patient has had a stroke based on measurable predictors. The goal is to, with the help of several easily measuable predictors such as ```smoking```,  ```hyptertension```, ```age```, to predict whether a person will suffer from a stroke. Since the data is heavily skewed (about 96% of the patients have never suffered a stroke), then we are forced to consider other measures than simply the accuracy of the model. As such, we develop various methods where we report both the accuracy, the recall, and the precision of the methods. For the full technical report, see
 
-:rocket: <a href=https://github.com/ebbeberge/stroke-classification/blob/main/Index.html> Full Technical Report</a> :rocket:
+:rocket: <a href=https://ebbeberge.github.io/stroke-prediction/> Full Technical Report</a> :rocket:
 
 ## About Stroke and the Dataset
 
@@ -119,4 +119,4 @@ For the ```age``` variable, we plot below a PD plot to see the marginal effects 
 
 We have developed various models for predicting future strokes in patients based on a small collection of easily testible variables. The models developed varies in performance for different metrics. Moreover, the computational speed for the different methods are also varied, ranging from a few seconds to several minutes. For more information about the models developed, we recommend to read the technical report:
 
-:rocket: <a href=https://github.com/ebbeberge/stroke-classification/blob/main/Index.html> Full Technical Report</a> :rocket:
+:rocket: <a href=https://ebbeberge.github.io/stroke-prediction/> Full Technical Report</a> :rocket:
