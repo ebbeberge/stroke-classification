@@ -2,15 +2,9 @@
 ## with Artifical Neural Networks, Ensamble-Methods, and Explainable Artificial Intellegence
 
 ## Table of Contents
-1. [TL;DR: Modeling Water Flow in Eggafossen](https://github.com/ebbeberge/water-flow-modeling#tldr-modeling-water-flow-in-eggafossen)
-2. [Files and Dependencies](https://github.com/ebbeberge/water-flow-modeling#files-and-dependencies)
-3. [Water Flow & Water Level in Norwegian Rivers](https://github.com/ebbeberge/water-flow-modeling#water-flow--water-level-in-norwegian-rivers)
-   - [General About Water Flow and Water Level](https://github.com/ebbeberge/water-flow-modeling#general-about-water-flow-and-water-level)
-   - [Eggafossen](https://github.com/ebbeberge/water-flow-modeling#eggafossen)
-   - [The HBV model](https://github.com/ebbeberge/water-flow-modeling#the-hbv-model)
-4. [A Brief View of the Eggafoss Data](https://github.com/ebbeberge/water-flow-modeling#a-brief-view-of-the-eggafoss-data)
-5. [Models Developed](https://github.com/ebbeberge/water-flow-modeling#models-developed)
-6. [Conclusions](https://github.com/ebbeberge/water-flow-modeling#conclusions)
+1. [TL;DR: Predicting Stroke with Advanced Statistical Methods](https://github.com/ebbeberge/stroke-classification#tldr-predicting-stroke-with-advanced-statistical-methods)
+2. [About the Dataset](https://github.com/ebbeberge/stroke-classification#about-the-dataset)
+
 
 
 ## TL;DR: Predicting Stroke with Advanced Statistical Methods
@@ -25,7 +19,7 @@ We analyze a stroke dataset and formulate various statistical models for predict
 
 To install the needed package dependencies, simply run `pip install -r requirements.txt`
 
-## Abot the Dataset
+## About the Dataset
 
 The dataset stems from <a href=https://www.kaggle.com/fedesoriano/stroke-prediction-dataset> Kaggle - Stroke Prediction </a> and records several details about over 5000 patients along with whether they have experienced a stroke. The complete list of recorded variables of the patients are:
 
