@@ -43,3 +43,13 @@ The dataset stems from <a href=https://www.kaggle.com/fedesoriano/stroke-predict
 * **stroke**: if the patient has had a stroke or not (1, 0)
 
 Unfortunately, the origin of the data is confidential, so we do not have any context regarding the data other than the variables listed above. In particular, we do not know the origin of the patients, nor do we know why the patients filled out the information we have been presented with. If the patients already had a sufficient medical history so that a e.g. a physician asked them to fill out the details presented, then this can heavily influence the data we have been given. With such little information about the data collected, the models we develop can only be used for illustrative/educational purposes. For furter development of the project, the focus should be on better data quality rather  than more advanced models.
+
+## Data Exploration
+
+In the data, there are 201 patients where their ```bmi``` has not been reported. Due to this being a possible relevant variable, we have chosen to remove these patents since they only consitute 4% of the total amount of patients. For the variable ```gender```, there are the three options <b>Male</b>, <b>Female</b>, and <b>Other</b>. Since there is only 1 patient whom is registered with the gender <b>Other</b>, we must unfortunately discard this patient as we will not be able to use this information in a statistical significant way. The variable ```smoking_status``` has the options <b>never smoked</b>, <b>formerly smoked</b>, <b> smokes</b>, and <b>unknown</b>. Since there are a significant amount of patents registered with <b>unknown </b> as their smoking status, we have choosen to include these patents in the study.
+
+The following histogram shows the age distribution of the patents that have experienced a stroke:
+
+<p align="center">
+  <img height="400px" src="stroke.jpg">
+</p>
