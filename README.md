@@ -14,6 +14,7 @@ To install the needed package dependencies, simply run `pip install -r requireme
 2. [About the Dataset](https://github.com/ebbeberge/stroke-classification#about-the-dataset)
 3. [Data Exploration](https://github.com/ebbeberge/stroke-classification/blob/main/README.md#data-exploration)
 4. [Models Developed](https://github.com/ebbeberge/stroke-classification/blob/main/README.md#models-developed)
+5. [Explainable Artificial Intellegence](https://github.com/ebbeberge/stroke-classification#explainable-artificial-intellegence)
 
 ## TL;DR: Predicting Stroke with Advanced Statistical Methods
 
@@ -77,4 +78,22 @@ The various methods with their properties are listed below. As can be seen from 
 
 ## Explainable Artificial Intellegence
 
-Since the predictions from the classification problem we are working with are very important, possibly lifechanging, predictions, the need for interpretability of the model arises. Understanding in which cases the model predicts that someone will have a stroke can help us identify which features or combination of features which are important for early detection and prevention. We will now try to use some of the methods from explainable AI to interpret the results from our random forest methods. We choose to interpret the XgBoost model with parameters found with Bayesian search, as this produced some of the best results.
+Since the predictions from the classification problem we are working with are very important, possibly lifechanging, predictions, the need for interpretability of the model arises. Understanding in which cases the model predicts that someone will have a stroke can help us identify which features or combination of features which are important for early detection and prevention. We will now try to use some of the methods from explainable AI to interpret the results from our random forest methods. We choose to interpret the XgBoost model with parameters found with Bayesian search, as this produced some of the best results. 
+
+The following plot shows which features are most important in the building of the trees in the XgBoots model:
+
+<p align="center">
+  <img height="400px" src="importance_of_variables.png">
+</p>
+
+We see that the most important features seems to be ```age```, ```avg_glucose_level```, and ```hypertension```. The model does not indicate that ```smoking``` or ```bmi``` is important, which is interesting.
+
+For the ```age``` variable, we plot below a PD plot to see the marginal effects the features have on the predicted outcome of the XgBoots. The PD plots shows what the marginal effect on the stroke prediction is for a specific value of a given feature.
+
+<p align="center">
+  <img height="400px" src="PDP_for_age.png">
+</p>
+
+## Conclusion
+
+We have developed various models for predicting future strokes in patients based on a small collection of easily testible variables. The models developed varies in performance for different metrics. Moreover, the computational speed for the different methods are also varied, ranging from a few seconds to several minutes. For more information about the models developed, we recommend to read the technical document.
